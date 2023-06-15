@@ -2,6 +2,7 @@
 
 install requirement:
 opencv - pip install opencv-python
+
 mediapipe - pip install mediapipe
 
 To run the code cd to path/to/pose folder 
