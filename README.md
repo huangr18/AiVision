@@ -6,11 +6,11 @@ opencv - pip install opencv-python
 
 mediapipe - pip install mediapipe
 
-To run the code cd to path/to/pose folder and type python test.py     
+To run the code cd to path/to/pose folder and type python AiTrainer.py     
 
 or      
 
-python3 test.py
+python3 AiTrainer.py
 
 if want to run on the camera instead of demo vedio
 
