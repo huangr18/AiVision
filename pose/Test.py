@@ -14,12 +14,15 @@ pTime = 0
 color = (225, 0 ,225)
 bar = 0
 per = 0
+frame_width = int(cap.get(3))
+frame_height = int(cap.get(4))
+size = (frame_width, frame_height)
 
 while True:
     success, img = cap.read()
     #success, src = cap.read()
     #img = cv2.flip(src, 180)
-    img = cv2.resize(img, (1280, 720))
+    img = cv2.resize(img, size)
     #img = cv2.resize(img, (1179, 2556))
     # img = cv2.imread("PoseImage/jumping_Jacks.jpg")
     img = detector.findPose(img, False)
