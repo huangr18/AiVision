@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+Upload
+{% endblock %}
+{% block content %}
+    <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">User Name</th>
+            <th scope="col">First Name</th>
+            <th scope="col">URL</th>
+            <th scope="col">Upload</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <th>{{ user.id }}</th>
+            <td>{{ user.username }}</td>
+            <td>{{ user.firstname }}</td>
+            <td>{{ user.video_URL }}</td>
+            <td>
+                <label for="myfile">Select a file:</label>
+                <input type="file" id="myfile" name="myfile">
+                <input type="submit" value="Submit">
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+      </table>
+
+{% endblock %}
