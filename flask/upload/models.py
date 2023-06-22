@@ -1,4 +1,8 @@
 from upload import db
+from flask_wtf import FlaskForm
+from wtforms import FileField, SubmitField
+from wtforms.validators import InputRequired
+
 
 
 class User(db.Model):
@@ -10,3 +14,7 @@ class User(db.Model):
 
     def __repr__(self):
         return f'User {self.username}'
+    
+class UploadFileForm(FlaskForm):
+    file = FileField('File', validators=[InputRequired()])
+    submit = SubmitField('Upload File')
