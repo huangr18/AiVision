@@ -14,7 +14,7 @@ cursor = connection.cursor()
 
 # Execute CREATE TABLE statement
 create_table_query = '''
-CREATE TABLE test_table (
+CREATE TABLE if not exists test_table (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     age INTEGER

@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 import os
 
 app.config['SECRET_KEY'] = 'abc123'
-app.config['UPLOAD_FOLDER'] = 'static\\files'
+app.config['UPLOAD_FOLDER'] = 'static/files'
 
 @app.route('/')
 @app.route('/home')
